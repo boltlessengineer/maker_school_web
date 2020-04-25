@@ -48,7 +48,7 @@ export default () => (
                 <ProjectName>1/3 사이버 트럭 만들기</ProjectName>
             </Project>
             <Project>
-                <ProjectName>VR 게임 만들기</ProjectName>
+                <ProjectName>VR 만들기</ProjectName>
             </Project>
             <Project>
                 <ProjectName>(대충 프로젝트)</ProjectName>
