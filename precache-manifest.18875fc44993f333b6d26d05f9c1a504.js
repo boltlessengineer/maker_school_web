@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7558ef377055dca591eee82e3da7051",
+    "revision": "c0dd92238132a88846979ece738c69a9",
     "url": "/maker_school_web/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maker_school_web/static/js/2.229c6859.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1863540629769fd9b231",
-    "url": "/maker_school_web/static/js/main.41001f0e.chunk.js"
+    "revision": "b04a0194cef59aa35ba4",
+    "url": "/maker_school_web/static/js/main.33913294.chunk.js"
   },
   {
     "revision": "f685da6a2ecedd3175ac",
@@ -22,10 +22,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a13ecbc22ee6fdd2a049cc1167724ad1",
     "url": "/maker_school_web/static/media/Lee.a13ecbc2.png"
-  },
-  {
-    "revision": "e794dd5fc0061e6497bd424c89813cf0",
-    "url": "/maker_school_web/static/media/jasper2.e794dd5f.png"
   },
   {
     "revision": "fc65b6fc5cde6681d611d55c6a74801d",
