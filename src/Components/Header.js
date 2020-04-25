@@ -6,18 +6,26 @@ const Header = styled('header')`
     height: 10vh;
     padding: 0 15vw;
     width: 100%;
+    margin: auto 0;
     display: flex;
     background-color: white;
     align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 800px) {
+        padding: 0 5vw;
+    }
 `;
 const List = styled('ul')`
     display: flex;
     list-style: none;
-    position: absolute;
-    right: 15vw;
+    float: right;
     width: auto;
     align-items: center;
     height: 10vh;
+    @media screen and (max-width: 800px) {
+        /*width: 0;
+        overflow: hidden;*/
+    }
 `;
 const Item = styled('li')`
     color: black;

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Content = styled.div`
     margin: 20px 15vw 0 15vw;
+    @media screen and (max-width: 800px) {
+        margin: 20px 5vw 0 5vw;
+    }
 `;
 
 const Title = styled.h1`
@@ -21,7 +24,6 @@ const ProfileContainer = styled.div`
 `;
 
 const Profile = styled.div`
-    float: right;
     background-color: white;
     height: auto;
     background-color: #fff;
@@ -100,6 +102,7 @@ export default () => (
                     <PersonName>이경우</PersonName>
                 </ProfileContent>
             </Profile>
+            {/*
             <Profile>
                 <ProfileImg img={require('../Assets/profiles/jasper2.png')} />
                 <ProfileContent>
@@ -107,7 +110,7 @@ export default () => (
                         이경우<Smaller> v2</Smaller>
                     </PersonName>
                 </ProfileContent>
-            </Profile>
+            </Profile>*/}
         </ProfileContainer>
     </Content>
 );

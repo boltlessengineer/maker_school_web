@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 const Content = styled.div`
     margin: 20px 15vw 0 15vw;
+    @media screen and (max-width: 800px) {
+        margin: 20px 5vw 0 5vw;
+    }
 `;
 
 const Title = styled.h1`
