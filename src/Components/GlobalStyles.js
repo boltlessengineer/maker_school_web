@@ -17,7 +17,7 @@ const globalStyles = createGlobalStyle`
         background-color: #fcfbfd;
         width: 100%;
         height: 100vh;
-        overflow-y: auto;
+        overflow-y: scroll;
     }
 `;
 
