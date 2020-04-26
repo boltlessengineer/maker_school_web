@@ -11,6 +11,9 @@ const globalStyles = createGlobalStyle`
         box-sizing:border-box;
         padding: 0;
         margin: 0;
+        &:focus {
+        outline: none;
+        }
     }
     body{
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -18,6 +21,7 @@ const globalStyles = createGlobalStyle`
         width: 100%;
         margin: auto 0;
         height: 100vh;
+        overflow-x: hidden;
         /*overflow-y: scroll;*/
     }
     body::-webkit-scrollbar { 

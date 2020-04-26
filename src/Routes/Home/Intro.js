@@ -30,6 +30,10 @@ const LogoSVG = styled('svg')`
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 23.854vw;
+    @media screen and (max-width: 800px) {
+        width: 50vw;
+    }
     transform: translate(-50%, -50%);
     animation: ${logoFill} 0.8s ease forwards 2.8s;
 `;
@@ -71,7 +75,7 @@ export default () => (
         <Helmet>
             <title>MAKER | Loading...</title>
         </Helmet>
-        <LogoSVG width="458" height="107" viewBox="0 0 458 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <LogoSVG height="107" viewBox="0 0 458 107" fill="none" xmlns="http://www.w3.org/2000/svg">
             <AnimationPath
                 d="M104.896 3.864V103.512H91.792V29.208L58.672 103.512H49.456L16.192 29.064V103.512H3.08801V3.864H17.2L54.064 86.232L90.928 3.864H104.896Z"
                 stroke="black"

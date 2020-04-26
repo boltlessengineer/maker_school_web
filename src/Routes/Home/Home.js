@@ -69,7 +69,7 @@ const Description = styled.p`
     margin: 50px 0px;
     font-size: 25px;
     line-height: 1.2em;
-    width: 100%;
+    width: 90%;
 `;
 
 const JoinLink = styled.a.attrs((props) => ({

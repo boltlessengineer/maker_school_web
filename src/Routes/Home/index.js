@@ -4,11 +4,9 @@ import Intro from './Intro';
 
 export default function HomePresenter() {
     const [intro, setIntro] = useState(true);
-    const localIntro = sessionStorage.getItem('intro');
+    const sessionIntro = sessionStorage.getItem('intro');
     useEffect(() => {
-        console.log('hey!');
-        if (localIntro !== null) {
-            console.log('set!');
+        if (sessionIntro !== null) {
             setIntro(false);
         }
         if (intro) {
