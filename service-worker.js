@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/maker_school_web/precache-manifest.335c628cba05986535e2ed728c69556d.js"
+  "/maker_school_web/precache-manifest.1050169b5d2fca2970d889b9538631f5.js"
 );
 
 self.addEventListener('message', (event) => {
