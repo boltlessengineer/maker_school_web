@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Content = styled.div`
-    margin: 20px 15vw 0 15vw;
+    margin: calc(20px + 10vh) 15vw 0 15vw;
     @media screen and (max-width: 800px) {
-        margin: 20px 5vw 0 5vw;
+        margin: calc(20px + 10vh) 5vw 0 5vw;
     }
 `;
 

@@ -5,9 +5,11 @@ import { find } from 'styled-components/test-utils';
 
 const HeaderContainer = styled('header')`
     height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 0 15vw;
     width: 100%;
-    margin: auto 0;
     display: flex;
     background-color: white;
     align-items: center;

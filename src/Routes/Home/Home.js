@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 
 const Section = styled('section')`
     height: 90vh;
-    margin: 0 15vw;
+    margin: 10vh 15vw 0 15vw;
     @media screen and (max-width: 800px) {
-        margin: 0 5vw;
+        margin: 10vh 5vw 0 5vw;
     }
     display: flex;
     flex-direction: row;
