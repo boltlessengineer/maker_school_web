@@ -3,11 +3,20 @@ import Home from './Home';
 import Intro from './Intro';
 
 export default function HomePresenter() {
-    const [loading, setLoading] = useState(true);
+    const [intro, setIntro] = useState(true);
+    const localIntro = sessionStorage.getItem('intro');
     useEffect(() => {
-        setTimeout(function () {
-            setLoading(false);
-        }, 5000);
+        console.log('hey!');
+        if (localIntro !== null) {
+            console.log('set!');
+            setIntro(false);
+        }
+        if (intro) {
+            setTimeout(function () {
+                setIntro(false);
+                sessionStorage.setItem('intro', false);
+            }, 5000);
+        }
     }, []);
-    return loading ? <Intro /> : <Home />;
+    return intro ? <Intro /> : <Home />;
 }

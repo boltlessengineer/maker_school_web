@@ -17,12 +17,6 @@ const logoLineAim = keyframes`
     }
 `;
 
-const strokeHide = keyframes`
-    to {
-        stroke: black;
-    }
-`;
-
 const IntroCover = styled('section')`
     position: absolute;
     top: 0;
@@ -41,7 +35,7 @@ const LogoSVG = styled('svg')`
 `;
 
 const AnimationPath = styled('path')`
-    stroke-width: 3;
+    stroke-width: 4;
     &:nth-child(1) {
         stroke-dasharray: 754.9266357421875;
         stroke-dashoffset: 754.9266357421875;
@@ -77,7 +71,7 @@ export default () => (
         <Helmet>
             <title>MAKER | Loading...</title>
         </Helmet>
-        <LogoSVG id="logo" width="458" height="107" viewBox="0 0 458 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <LogoSVG width="458" height="107" viewBox="0 0 458 107" fill="none" xmlns="http://www.w3.org/2000/svg">
             <AnimationPath
                 d="M104.896 3.864V103.512H91.792V29.208L58.672 103.512H49.456L16.192 29.064V103.512H3.08801V3.864H17.2L54.064 86.232L90.928 3.864H104.896Z"
                 stroke="black"
