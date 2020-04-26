@@ -148,13 +148,19 @@ function Header({ location: { pathname } }) {
             <Logo to="/">MAKER</Logo>
             <List toggle={BurgerToggle}>
                 <Item selected={pathname === '/about'}>
-                    <SLink to="/about">About</SLink>
+                    <SLink to="/about" onClick={handleBurger}>
+                        About
+                    </SLink>
                 </Item>
                 <Item selected={pathname.startsWith('/contact')}>
-                    <SLink to="/contact">Contact</SLink>
+                    <SLink to="/contact" onClick={handleBurger}>
+                        Contact
+                    </SLink>
                 </Item>
                 <Item selected={pathname.startsWith('/projects')}>
-                    <SLink to="/projects">Projects</SLink>
+                    <SLink to="/projects" onClick={handleBurger}>
+                        Projects
+                    </SLink>
                 </Item>
             </List>
             <Burger onClick={handleBurger} toggle={BurgerToggle}>
