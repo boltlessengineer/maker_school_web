@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Profile from '../Components/Profile';
+import Profile from '../../Components/Profile';
 
 const Content = styled.div`
     padding-top: calc(20px + 10vh);
@@ -30,7 +30,7 @@ export default () => {
         {
             id: 201910518,
             name: '이성민',
-            profileImg: require('../Assets/profiles/leeee.png'),
+            profileImg: require('Assets/profiles/leeee.png'),
             blogUrl: 'https://boltlessengineer.tistory.com/',
             Spot: 'p_manager',
         },
@@ -56,13 +56,9 @@ export default () => {
             Spot: 'member',
         },
     ];
-    const HandleProfile = (e) => {
-        console.log('you click');
-        console.log(e.currentTarget);
-    };
     return (
         <Content>
-            <Title>Contact</Title>
+            <Title>Members</Title>
             <ProfilesContainer>
                 {Profiles.map((profile) => (
                     <Profile

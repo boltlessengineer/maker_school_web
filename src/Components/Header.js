@@ -152,9 +152,9 @@ function Header({ location: { pathname } }) {
                         About
                     </SLink>
                 </Item>
-                <Item selected={pathname.startsWith('/contact')}>
-                    <SLink to="/contact" onClick={handleBurger}>
-                        Contact
+                <Item selected={pathname.startsWith('/members')}>
+                    <SLink to="/members" onClick={handleBurger}>
+                        Members
                     </SLink>
                 </Item>
                 <Item selected={pathname.startsWith('/projects')}>
