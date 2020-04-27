@@ -62,7 +62,7 @@ export default () => {
     };
     return (
         <Content>
-            <Title>Members</Title>
+            <Title>Contact</Title>
             <ProfilesContainer>
                 {Profiles.map((profile) => (
                     <Profile
