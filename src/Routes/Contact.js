@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Profile from '../Components/Profile';
 
 const Content = styled.div`
-    margin: calc(20px + 10vh) 15vw 0 15vw;
+    padding-top: calc(20px + 10vh);
+    margin: 0 15vw;
     @media screen and (max-width: 800px) {
-        margin: calc(20px + 10vh) 5vw 0 5vw;
+        margin: 0 5vw;
     }
 `;
 
@@ -15,7 +17,7 @@ const Title = styled.h1`
     margin-bottom: 1em;
 `;
 
-const ProfileContainer = styled.div`
+const ProfilesContainer = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
@@ -23,94 +25,56 @@ const ProfileContainer = styled.div`
     grid-gap: 20px;
 `;
 
-const Profile = styled.div`
-    background-color: white;
-    height: auto;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 10px 21px #e7eeef;
-    display: flex;
-    justify-content: space-around;
-`;
-
-const ProfileContent = styled.div``;
-
-const PersonName = styled.div`
-    font-size: 2em;
-    font-weight: 530;
-    margin-bottom: 10px;
-`;
-const Smaller = styled.span`
-    font-size: 0.8em;
-    font-weight: 500;
-`;
-
-const ProfileImg = styled.div`
-    background-image: url(${(props) => props.img});
-    background-size: cover;
-    background-position: center center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-`;
-
-const BlogLink = styled.a.attrs((props) => ({
-    href: props.blogUrl,
-    target: '_blank',
-}))`
-    float: right;
-    color: #fcfbfb;
-    text-decoration: none;
-    padding: 5px 5px;
-    background-color: black;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    &:hover {
-        text-decoration: underline;
-    }
-`;
-
-export default () => (
-    <Content>
-        <Title>Members</Title>
-        <ProfileContainer>
-            <Profile>
-                <ProfileImg img={require('../Assets/profiles/leeee.png')} />
-                <ProfileContent>
-                    <PersonName>이성민</PersonName>
-                    <BlogLink blogUrl="https://boltlessengineer.tistory.com/">Blog</BlogLink>
-                </ProfileContent>
-            </Profile>
-            <Profile>
-                <ProfileImg img={require('../Assets/profiles/kim.png')} />
-                <ProfileContent>
-                    <PersonName>김진우</PersonName>
-                </ProfileContent>
-            </Profile>
-            <Profile>
-                <ProfileImg img={require('../Assets/profiles/Lee.png')} />
-                <ProfileContent>
-                    <PersonName>이시현</PersonName>
-                    <BlogLink blogUrl="https://lektion-von-erfolglosigkeit.tistory.com/">Blog</BlogLink>
-                </ProfileContent>
-            </Profile>
-            <Profile>
-                <ProfileImg img={require('../Assets/profiles/jasper.png')} />
-                <ProfileContent>
-                    <PersonName>이경우</PersonName>
-                </ProfileContent>
-            </Profile>
-            {/*
-            <Profile>
-                <ProfileImg img={require('../Assets/profiles/jasper2.png')} />
-                <ProfileContent>
-                    <PersonName>
-                        이경우<Smaller> v2</Smaller>
-                    </PersonName>
-                </ProfileContent>
-            </Profile>*/}
-        </ProfileContainer>
-    </Content>
-);
+export default () => {
+    const Profiles = [
+        {
+            id: 201910518,
+            name: '이성민',
+            profileImg: require('../Assets/profiles/leeee.png'),
+            blogUrl: 'https://boltlessengineer.tistory.com/',
+            Spot: 'p_manager',
+        },
+        {
+            id: 201910508,
+            name: '김진우',
+            profileImg: require('Assets/profiles/kim.png'),
+            blogUrl: '',
+            Spot: 's_manager',
+        },
+        {
+            id: 201910216,
+            name: '이시현',
+            profileImg: require('Assets/profiles/Lee.png'),
+            blogUrl: 'https://lektion-von-erfolglosigkeit.tistory.com/',
+            Spot: 'member',
+        },
+        {
+            id: 201910700,
+            name: '이경우',
+            profileImg: require('Assets/profiles/jasper.png'),
+            blogUrl: '',
+            Spot: 'member',
+        },
+    ];
+    const HandleProfile = (e) => {
+        console.log('you click');
+        console.log(e.currentTarget);
+    };
+    return (
+        <Content>
+            <Title>Members</Title>
+            <ProfilesContainer>
+                {Profiles.map((profile) => (
+                    <Profile
+                        key={profile.id}
+                        id={profile.id}
+                        name={profile.name}
+                        profileImg={profile.profileImg}
+                        blogUrl={profile.blogUrl}
+                        spot={profile.spot}
+                    />
+                ))}
+            </ProfilesContainer>
+        </Content>
+    );
+};

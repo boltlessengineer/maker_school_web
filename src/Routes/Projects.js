@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Content = styled.div`
-    margin: calc(20px + 10vh) 15vw 0 15vw;
+    padding-top: calc(20px + 10vh);
+    margin: 0 15vw;
     @media screen and (max-width: 800px) {
-        margin: calc(20px + 10vh) 5vw 0 5vw;
+        margin: 0 5vw;
     }
 `;
 
@@ -52,18 +53,6 @@ export default () => (
             </Project>
             <Project>
                 <ProjectName>VR 만들기</ProjectName>
-            </Project>
-            <Project>
-                <ProjectName>(대충 프로젝트)</ProjectName>
-            </Project>
-            <Project>
-                <ProjectName>(대충 프로젝트)</ProjectName>
-            </Project>
-            <Project>
-                <ProjectName>(대충 프로젝트)</ProjectName>
-            </Project>
-            <Project>
-                <ProjectName>(대충 프로젝트)</ProjectName>
             </Project>
             <Project>
                 <ProjectName>(대충 프로젝트)</ProjectName>

@@ -12,7 +12,7 @@ const Title = styled.h1`
     font-size: 3em;
     font-weight: 600;
     line-height: 150%;
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
 `;
 
 const Smaller = styled.span`
@@ -75,6 +75,7 @@ const Rainbow = styled.span`
         }
     }
 `;
+
 const Strong = styled.span`
     font-weight: 600;
 `;
@@ -100,6 +101,15 @@ const JoinLink = styled.a.attrs((props) => ({
 
 export default () => (
     <Content>
+        <Title>수상경력</Title>
+        <Description>
+            <ul>
+                <li>메이커톤 대상 수상</li>
+                <li>부천 로봇 판타지아 대상 수상</li>
+                <li>국민은행 소프트웨어 경진대회 최우수상 수상</li>
+            </ul>
+        </Description>
+        <Hr />
         <Title>
             Q<Smaller>&</Smaller>A
         </Title>
@@ -144,7 +154,13 @@ export default () => (
             스크래치<Smaller>(블록코딩)</Smaller> 해봤어요!
         </Question>
         <Description>
-            <Strong>🙇‍♂️귀하게 모시겠습니다.</Strong> <JoinLink>가시죠</JoinLink>
+            <Strong>
+                <span role="img" arial-label="bow">
+                    🙇‍♂️
+                </span>
+                귀하게 모시겠습니다.
+            </Strong>{' '}
+            <JoinLink>가시죠{/* 👉(https://forms.gle/uR4rX1nF4HTttaSX7) */}</JoinLink>
         </Description>
         <Hr />
         <Question>Maker에서 어떤 기술을 배울 수 있나요?</Question>
