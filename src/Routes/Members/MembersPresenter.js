@@ -73,7 +73,7 @@ export default () => {
             phoneNum: '010-4268-1815',
             email: '',
             blogUrl: '',
-            introduction: '이름을 Jasper로 적어달라고 찡찡거림. 그러려면 별명용으로 따로 속성 만들어야 해서 안해줄꺼임',
+            introduction: '',
             spot: 'member',
         },
     ];
