@@ -167,7 +167,7 @@ const Button = styled.button`
 `;
 
 const JoinButton = ({ children }) => (
-    <Button onClick={() => (window.location.href = 'https://forms.gle/uR4rX1nF4HTttaSX7')}>
+    <Button onClick={() => window.open('https://forms.gle/uR4rX1nF4HTttaSX7', '_blank')}>
         <JoinLink>{children}</JoinLink>
     </Button>
 );

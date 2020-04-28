@@ -17,7 +17,7 @@ const HeaderContainer = styled('header')`
     @media screen and (max-width: 800px) {
         padding: 0 5vw;
     }
-    z-index: 99;
+    z-index: 5;
 `;
 
 const Logo = styled(Link)`

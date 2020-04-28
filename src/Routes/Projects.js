@@ -36,13 +36,20 @@ const ProjectContainer = styled.div`
 const Project = styled.div`
     background-color: white;
     height: 150px;
-    background-color: #fff;
+    background-image: url(${(props) => props.bgUrl});
+    background-size: cover;
+    background-position: center center;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 10px 21px #e7eeef;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    &:hover {
+        transition: transform 0.5s ease;
+        transform: translateY(-8px);
+    }
 `;
 
 const ProjectName = styled.div`
@@ -59,8 +66,8 @@ export default () => (
             <Project>
                 <ProjectName>동아리 홈페이지 만들기</ProjectName>
             </Project>
-            <Project>
-                <ProjectName>1/3 사이버 트럭 만들기</ProjectName>
+            <Project bgUrl={require('Assets/projects/cover/Cyber_Truck.png')}>
+                <ProjectName style={{ color: 'white' }}>1/3 사이버 트럭 만들기</ProjectName>
             </Project>
             <Project>
                 <ProjectName>VR 만들기</ProjectName>

@@ -53,6 +53,48 @@ const JoinLink = styled.a.attrs((props) => ({
     }
 `;
 
+const JoinSLink = styled.span`
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+    margin: 0 10px;
+`;
+
+const Button = styled.button`
+    border-radius: 8px;
+    background-color: black;
+    border: none;
+    color: #fcfbfb;
+    text-align: center;
+    padding: 15px 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    ${JoinSLink}:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    &:hover ${JoinSLink} {
+        padding-right: 20px;
+        margin: 0px;
+    }
+    &:hover ${JoinSLink}:after {
+        opacity: 1;
+        right: 2px;
+    }
+`;
+
+const JoinButton = ({ children }) => (
+    <Button onClick={() => window.open('https://forms.gle/uR4rX1nF4HTttaSX7', '_blank')}>
+        <JoinSLink>{children}</JoinSLink>
+    </Button>
+);
+
 const Header = styled.div`
     width: 100%;
     margin-bottom: 30px;
@@ -228,7 +270,7 @@ export default () => (
                 <Header>
                     <H1>MAKER</H1>
                     <Description>메이커 동아리는 코딩, 모델링, 3d 프린팅을 포함한 복합적인 maker 활동을 하는 동아리입니다.</Description>
-                    <JoinLink>가입하기</JoinLink>
+                    <JoinButton>가입하기</JoinButton>
                 </Header>
             </GridBlock>
         </GridContainer>
