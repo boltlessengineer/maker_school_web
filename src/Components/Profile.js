@@ -93,6 +93,32 @@ const CloseBtn = styled.button`
     cursor: pointer;
 `;
 
+const ManagerTag = styled.div`
+    position: absolute;
+    top: 15px;
+    left: -80px;
+    transform: rotate(-45deg);
+    padding: 0.5em 100px;
+    ${(props) =>
+        props.spot === 'p_manager'
+            ? `
+        &:after {
+            font-size: 1em;
+            color: white;
+            content: "부장"
+        }
+        background-color: #2980b9;
+            `
+            : `
+        &:after {
+            font-size: 1em;
+            color: white;
+            content: "차장"
+        }
+        background-color: #8e44ad;
+    `}
+`;
+
 const PopUpCard = styled.div`
     position: fixed;
     top: 20vh;
@@ -100,6 +126,9 @@ const PopUpCard = styled.div`
     padding: 3vw;
     width: 60vw;
     height: 60vh;
+    ${ManagerTag} {
+        font-size: 2em;
+    }
     @media screen and (max-width: 800px) {
         top: 15vh;
         right: 6vw;
@@ -112,6 +141,7 @@ const PopUpCard = styled.div`
     background-color: white;
     border-radius: 16px;
     box-shadow: 0 10px 21px #e7eeef;
+    overflow: hidden;
 `;
 
 const ProfileCard = styled.div`
@@ -128,6 +158,7 @@ const ProfileCard = styled.div`
         transition: transform 0.5s ease;
         transform: translateY(-8px);
     }
+    overflow: hidden;
 `;
 
 const ProfileContent = styled.div``;
@@ -168,10 +199,13 @@ const BlogLink = styled.a.attrs((props) => ({
     }
 `;
 
+const SManagerTag = styled.div``;
+
 const Profile = ({ profile, popUpFunc, hideFunc, show }) => {
     return (
         <>
             <ProfileCard id={profile.id} onClick={popUpFunc}>
+                {profile.spot !== 'member' && <ManagerTag spot={profile.spot}></ManagerTag>}
                 <ProfileImg img={profile.Img} />
                 <ProfileContent>
                     <PersonName>{profile.name}</PersonName>
@@ -182,6 +216,7 @@ const Profile = ({ profile, popUpFunc, hideFunc, show }) => {
                 <PopUpFilter />
                 <PopUpCard>
                     <CloseBtn onClick={hideFunc}>×</CloseBtn>
+                    {profile.spot !== 'member' && <ManagerTag spot={profile.spot}></ManagerTag>}
                     <Topbox>
                         <ProfileImg img={profile.Img} style={{ width: '20vh', height: '20vh' }} />
                         <PopUpContent>
