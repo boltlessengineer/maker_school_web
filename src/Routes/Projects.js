@@ -36,16 +36,17 @@ const ProjectContainer = styled.div`
 const Project = styled.div`
     background-color: white;
     height: 150px;
-    background-image: url(${(props) => props.bgUrl});
-    background-size: cover;
-    background-position: center center;
     border-radius: 12px;
-    padding: 20px;
     box-shadow: 0 10px 21px #e7eeef;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
     cursor: pointer;
+    z-index: 1;
+    background-image: url(${(props) => props.bgUrl});
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
     &:hover {
         transition: transform 0.5s ease;
         transform: translateY(-8px);
@@ -53,24 +54,30 @@ const Project = styled.div`
 `;
 
 const ProjectName = styled.div`
+    position: absolute;
+    bottom: 0;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: 600;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: ${(props) => props.bgColor};
 `;
 
 export default () => (
     <Content>
-        <Title>
-            Projects<Note>&nbsp;&nbsp;아직 준비중인 페이지 입니다.</Note>
-        </Title>
+        <Title>Projects{/*<Note>&nbsp;&nbsp;아직 준비중인 페이지 입니다.</Note> */}</Title>
         <ProjectContainer>
-            <Project>
-                <ProjectName>동아리 홈페이지 만들기</ProjectName>
+            <Project bgUrl={require('Assets/projects/cover/Code.png')}>
+                <ProjectName bgColor="#111111">동아리 홈페이지 만들기</ProjectName>
             </Project>
             <Project bgUrl={require('Assets/projects/cover/Cyber_Truck.png')}>
-                <ProjectName style={{ color: 'white' }}>1/3 사이버 트럭 만들기</ProjectName>
+                <ProjectName bgColor="#111111">1/3 사이버 트럭 만들기</ProjectName>
             </Project>
-            <Project>
-                <ProjectName>VR 만들기</ProjectName>
+            <Project bgUrl={require('Assets/projects/cover/VR-icon.png')}>
+                <ProjectName bgColor="#111111">VR 만들기</ProjectName>
             </Project>
         </ProjectContainer>
     </Content>
