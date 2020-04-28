@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ae6400a353fa7be448ea8f9fb116504e",
+    "revision": "881670ebec3939f8209779ca5d9a5619",
     "url": "/maker_school_web/index.html"
   },
   {
@@ -12,12 +12,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maker_school_web/static/js/2.59ad61e0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0001f46706dafcf41ab9",
-    "url": "/maker_school_web/static/js/main.9ac79693.chunk.js"
+    "revision": "80c3c79130b8a43212b7",
+    "url": "/maker_school_web/static/js/main.eef49869.chunk.js"
   },
   {
     "revision": "f685da6a2ecedd3175ac",
     "url": "/maker_school_web/static/js/runtime-main.80941235.js"
+  },
+  {
+    "revision": "485bf5a582fbd822c2999287e9ee4358",
+    "url": "/maker_school_web/static/media/Cyber_Truck.485bf5a5.png"
   },
   {
     "revision": "a13ecbc22ee6fdd2a049cc1167724ad1",
