@@ -79,6 +79,18 @@ const Topbox = styled.div`
 
 const CloseBtn = styled.button`
     border: 0;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 3em;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    cursor: pointer;
 `;
 
 const PopUpCard = styled.div`
@@ -103,9 +115,8 @@ const PopUpCard = styled.div`
 `;
 
 const ProfileCard = styled.div`
-    /*background-color: white;*/
     height: auto;
-    background-color: #fff;
+    background-color: white;
     border-radius: 12px;
     padding: 30px;
     position: relative;
@@ -168,8 +179,9 @@ const Profile = ({ profile, popUpFunc, hideFunc, show }) => {
                 </ProfileContent>
             </ProfileCard>
             <PopUp show={show}>
-                <PopUpFilter onClick={hideFunc} />
+                <PopUpFilter />
                 <PopUpCard>
+                    <CloseBtn onClick={hideFunc}>×</CloseBtn>
                     <Topbox>
                         <ProfileImg img={profile.Img} style={{ width: '20vh', height: '20vh' }} />
                         <PopUpContent>

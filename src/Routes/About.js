@@ -281,6 +281,23 @@ export default () => (
             확정은 아닙니다만, 올해는 아날로그적인 DIY와 웹 개발 이 두가지를 중심으로 진행할 생각입니다.
         </Description>
         <Hr />
+        <Question>💥질문 있어요!💥</Question>
+        <Description>
+            <SLink to="/contact">Contact</SLink> 페이지에서 연락처를 확인하실 수 있습니다.
+            <br />
+            <br />
+            문의사항은 이성민 부장이나 김진우 차장을 통해 연락주세요.
+            <br />
+            전화나 카톡, 이메일도 가능합니다.
+        </Description>
+        <Hr />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Del>아래부터는 웹사이트 자랑</Del>
         <br />
         <br />
@@ -288,13 +305,18 @@ export default () => (
         <Description>
             부장, 이성민입니다.
             <br />
-            해당 홈페이지는 ReactJS로 제가 100% 혼자서 만든 웹사이트입니다.
+            해당 홈페이지는 ReactJS로 제가 100% 혼자서 5일 동안 만든 웹사이트입니다.
         </Description>
         <Hr />
         <Question>처음 들어올때 인트로 그거 또 보여주세요</Question>
         <Description>
             넵.&nbsp;&nbsp;&nbsp;&nbsp;
             <SLink to="/intro">여기를 클릭</SLink>
+        </Description>
+        <Hr />
+        <Question>왜 취소선은 클릭하면 사라지나요?</Question>
+        <Description>
+            <Del>혹시 나무위키체라고 들어보셨나요?</Del>
         </Description>
         <Hr />
     </Content>
