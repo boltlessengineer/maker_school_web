@@ -30,7 +30,41 @@ const Smaller = styled.span`
     font-weight: 500;
 `;
 
-const Youtube = () => <></>;
+const YoutubeInner = styled.div`
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 100%;
+`;
+
+const YoutubeContainer = styled.div`
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 53.325%;
+    @media screen and (max-width: 800px) {
+        padding-bottom: 56.25%;
+        ${YoutubeInner} {
+            left: 0;
+            width: 100%;
+        }
+    }
+`;
+
+const YoutubeIframe = styled.iframe`
+    width: 100%;
+    height: 100%;
+    border: 0;
+`;
+
+const Youtube = (url) => (
+    <YoutubeContainer>
+        <YoutubeInner>
+            <YoutubeIframe src={url} />
+        </YoutubeInner>
+    </YoutubeContainer>
+);
 
 const Question = styled.h2`
     font-size: 2em;
@@ -141,6 +175,13 @@ const JoinButton = ({ children }) => (
 export default () => (
     <Content>
         <Title>About</Title>
+        <SubTitle>홍보영상</SubTitle>
+        <YoutubeContainer>
+            <YoutubeInner>
+                <YoutubeIframe src={'https://www.youtube.com/embed/B8aiSA7EX70'} />
+            </YoutubeInner>
+        </YoutubeContainer>
+        <Hr />
         <SubTitle>수상경력</SubTitle>
         <Description>
             <ul>

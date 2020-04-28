@@ -19,6 +19,12 @@ const Title = styled.h1`
     border-bottom: 1px solid #e9e9e9;
 `;
 
+const Note = styled.span`
+    font-size: 0.5em;
+    font-weight: 500;
+    color: #95a5a6;
+`;
+
 const ProjectContainer = styled.div`
     width: 100%;
     height: 100%;
@@ -46,7 +52,9 @@ const ProjectName = styled.div`
 
 export default () => (
     <Content>
-        <Title>Projects</Title>
+        <Title>
+            Projects<Note>&nbsp;&nbsp;아직 준비중인 페이지 입니다.</Note>
+        </Title>
         <ProjectContainer>
             <Project>
                 <ProjectName>동아리 홈페이지 만들기</ProjectName>
@@ -56,15 +64,6 @@ export default () => (
             </Project>
             <Project>
                 <ProjectName>VR 만들기</ProjectName>
-            </Project>
-            <Project>
-                <ProjectName>(대충 프로젝트)</ProjectName>
-            </Project>
-            <Project>
-                <ProjectName>(대충 프로젝트)</ProjectName>
-            </Project>
-            <Project>
-                <ProjectName>(대충 프로젝트)</ProjectName>
             </Project>
         </ProjectContainer>
     </Content>
