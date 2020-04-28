@@ -101,11 +101,11 @@ const PopUpCard = styled.div`
     width: 60vw;
     height: 60vh;
     @media screen and (max-width: 800px) {
-        top: 18vh;
+        top: 15vh;
         right: 6vw;
         padding: 3vw;
         width: 88vw;
-        height: 64vh;
+        height: 70vh;
         min-height: 110vw;
     }
     z-index: 11;
