@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const Section = styled('section')`
     height: 90vh;
@@ -34,23 +35,6 @@ const Description = styled.p`
     font-size: 25px;
     line-height: 1.2em;
     width: 90%;
-`;
-
-const JoinLink = styled.a.attrs((props) => ({
-    href: 'https://forms.gle/uR4rX1nF4HTttaSX7',
-    target: '_blank',
-}))`
-    font-size: 20px;
-    color: #fcfbfb;
-    text-decoration: none;
-    padding: 15px 20px;
-    background-color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    &:hover {
-        text-decoration: underline;
-    }
 `;
 
 const JoinSLink = styled.span`
@@ -89,11 +73,58 @@ const Button = styled.button`
     }
 `;
 
+const SLink = styled(Link)`
+    display: block;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: white;
+    color: #fcfbfb;
+    text-align: center;
+    padding: 15px 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    ${JoinSLink} {
+        color: black;
+    }
+    ${JoinSLink}:after {
+        content: ' ↗';
+        font-weight: 600;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -30px;
+        transition: 0.5s;
+    }
+    &:hover ${JoinSLink} {
+        padding-right: 20px;
+        margin: 0px;
+    }
+    &:hover ${JoinSLink}:after {
+        opacity: 1;
+        right: -5px;
+    }
+`;
+
 const JoinButton = ({ children }) => (
     <Button onClick={() => window.open('https://forms.gle/uR4rX1nF4HTttaSX7', '_blank')}>
         <JoinSLink>{children}</JoinSLink>
     </Button>
 );
+
+const PageButton = ({ children }) => (
+    <SLink to="/about">
+        <JoinSLink>{children}</JoinSLink>
+    </SLink>
+);
+
+const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    ${SLink} {
+        margin-right: 10px;
+    }
+`;
 
 const Header = styled.div`
     width: 100%;
@@ -270,7 +301,10 @@ export default () => (
                 <Header>
                     <H1>MAKER</H1>
                     <Description>메이커 동아리는 코딩, 모델링, 3d 프린팅을 포함한 복합적인 maker 활동을 하는 동아리입니다.</Description>
-                    <JoinButton>가입하기</JoinButton>
+                    <ButtonContainer>
+                        <PageButton>자세히 알아보기</PageButton>
+                        <JoinButton>가입하기</JoinButton>
+                    </ButtonContainer>
                 </Header>
             </GridBlock>
         </GridContainer>

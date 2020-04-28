@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Content = styled.div`
     margin: calc(20px + 10vh) 15vw 0 15vw;
@@ -66,6 +67,19 @@ const Youtube = (url) => (
     </YoutubeContainer>
 );
 
+const PrizeLi = styled.li``;
+
+const PrizeUl = styled.ul`
+    padding-left: 5px;
+    ${PrizeLi} {
+        margin-bottom: 5px;
+        &:before {
+            content: '🏆';
+            padding-right: 15px;
+        }
+    }
+`;
+
 const Question = styled.h2`
     font-size: 2em;
     font-weight: 600;
@@ -91,7 +105,8 @@ const Del = styled.del`
 `;
 
 const Rainbow = styled.span`
-    animation-duration: 3s;
+    font-weight: 600;
+    animation-duration: 2s;
     animation-name: rainbowLink;
     animation-iteration-count: infinite;
     @keyframes rainbowLink {
@@ -172,6 +187,19 @@ const JoinButton = ({ children }) => (
     </Button>
 );
 
+const SLink = styled(Link)`
+    color: #fcfbfb;
+    text-decoration: none;
+    padding: 3px 5px;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+`;
+
 export default () => (
     <Content>
         <Title>About</Title>
@@ -184,11 +212,11 @@ export default () => (
         <Hr />
         <SubTitle>수상경력</SubTitle>
         <Description>
-            <ul>
-                <li>메이커톤 대상 수상</li>
-                <li>부천 로봇 판타지아 대상 수상</li>
-                <li>국민은행 소프트웨어 경진대회 최우수상 수상</li>
-            </ul>
+            <PrizeUl>
+                <PrizeLi>메이커톤 대상 수상</PrizeLi>
+                <PrizeLi>부천 로봇 판타지아 대상 수상</PrizeLi>
+                <PrizeLi>국민은행 소프트웨어 경진대회 최우수상 수상</PrizeLi>
+            </PrizeUl>
         </Description>
         <Hr />
         <SubTitle>
@@ -248,6 +276,25 @@ export default () => (
             2020 Maker의 경우, HTML/CSS/JS를 포함한 프론트엔드 기초부터
             <br />
             Arduino, Unity3D, Python, Fusion360, SketchUp, 실전 3D 프린팅 심지어 납땜까지 배워보실 수 있습니다.
+            <br />
+            <br />
+            확정은 아닙니다만, 올해는 아날로그적인 DIY와 웹 개발 이 두가지를 중심으로 진행할 생각입니다.
+        </Description>
+        <Hr />
+        <Del>아래부터는 웹사이트 자랑</Del>
+        <br />
+        <br />
+        <Question>이 웹사이트는 누가 만든건가요?</Question>
+        <Description>
+            부장, 이성민입니다.
+            <br />
+            해당 홈페이지는 ReactJS로 제가 100% 혼자서 만든 웹사이트입니다.
+        </Description>
+        <Hr />
+        <Question>처음 들어올때 인트로 그거 또 보여주세요</Question>
+        <Description>
+            넵.&nbsp;&nbsp;&nbsp;&nbsp;
+            <SLink to="/intro">여기를 클릭</SLink>
         </Description>
         <Hr />
     </Content>
