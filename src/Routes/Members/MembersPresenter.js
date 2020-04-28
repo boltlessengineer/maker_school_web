@@ -45,7 +45,7 @@ export default () => {
         {
             id: 201910508,
             name: '김진우',
-            currentSchoolID: 20417,
+            currentSchoolID: 20408,
             Img: require('Assets/profiles/kim.png'),
             phoneNum: '010-3454-6245',
             email: 'mond07211010@gmail.com',
@@ -56,7 +56,7 @@ export default () => {
         {
             id: 201910216,
             name: '이시현',
-            currentSchoolID: 20400,
+            currentSchoolID: 20417,
             Img: require('Assets/profiles/Lee.png'),
             phoneNum: '010-5279-5819',
             email: 'richardl22245@gmail.com',
@@ -68,7 +68,7 @@ export default () => {
         {
             id: 201910700,
             name: '이경우',
-            currentSchoolID: 20500,
+            currentSchoolID: 20515,
             Img: require('Assets/profiles/jasper.png'),
             phoneNum: '010-4268-1815',
             email: '',
