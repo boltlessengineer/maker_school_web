@@ -13,7 +13,7 @@ export default () => (
         <Route path="/" exact component={Home} />
         <Route path="/intro" exact component={Intro} />
         <Route path="/about" exact component={About} />
-        <Route path="/members" exact component={Members} />
+        <Route path="/contact" exact component={Members} />
         <Route path="/projects" exact component={Projects} />
     </Router>
 );

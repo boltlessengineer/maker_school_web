@@ -2,19 +2,119 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Profile = styled.div`
+const PopUp = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    ${(props) => (props.show ? `display: block` : `display: none`)}
+`;
+
+const PopUpFilter = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ecf0f1;
+    opacity: 0.8;
+    z-index: 10;
+`;
+
+const PopUpContent = styled.div`
+    font-size: 2em;
+    line-height: 1.5em;
+    padding-left: 1vw;
+    padding-top: 1vh;
+`;
+
+const PopUpName = styled.div`
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 10px;
+`;
+
+const PhoneNum = styled.div``;
+
+const Email = styled.div`
+    cursor: pointer;
+`;
+
+const IntroductionTitle = styled.h3`
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+`;
+
+const Introduction = styled.p`
+    font-size: 0.5em;
+    line-height: 1.5em;
+    height: 10vh;
+    width: 30vw;
+`;
+
+const Hr = styled.hr`
+    background-color: #e9e9e9;
+    border: none;
+    height: 1px;
+    margin: 1rem 0;
+`;
+
+const Topbox = styled.div`
+    display: flex;
+    padding-bottom: 2vh;
+    @media screen and (max-width: 1100px) {
+        font-size: 0.9em;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        ${Introduction} {
+            width: 100%;
+        }
+    }
+`;
+
+const CloseBtn = styled.button`
+    border: 0;
+`;
+
+const PopUpCard = styled.div`
+    position: fixed;
+    top: 20vh;
+    right: 20vw;
+    padding: 3vw;
+    width: 60vw;
+    height: 60vh;
+    @media screen and (max-width: 800px) {
+        top: 10vh;
+        right: 6vw;
+        padding: 3vw;
+        width: 88vw;
+        height: 80vh;
+    }
+    z-index: 11;
     background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 21px #e7eeef;
+`;
+
+const ProfileCard = styled.div`
+    /*background-color: white;*/
     height: auto;
     background-color: #fff;
     border-radius: 12px;
     padding: 30px;
+    position: relative;
     box-shadow: 0 10px 21px #e7eeef;
     display: flex;
     justify-content: space-around;
     cursor: pointer;
     &:hover {
         transition: transform 0.5s ease;
-        transform: translateY(-5px);
+        transform: translateY(-8px);
     }
 `;
 
@@ -36,7 +136,7 @@ const ProfileImg = styled.div`
     background-position: center center;
     width: 100px;
     height: 100px;
-    border-radius: 50px;
+    border-radius: 50%;
 `;
 
 const BlogLink = styled.a.attrs((props) => ({
@@ -56,25 +156,45 @@ const BlogLink = styled.a.attrs((props) => ({
     }
 `;
 
-const Poster = ({ id, name, profileImg, blogUrl, spot }) => {
-    console.log(profileImg);
+const Profile = ({ profile, popUpFunc, hideFunc, show }) => {
     return (
-        <Profile>
-            <ProfileImg img={profileImg} />
-            <ProfileContent>
-                <PersonName>{name}</PersonName>
-                {blogUrl && <BlogLink blogUrl={blogUrl}>Blog</BlogLink>}
-            </ProfileContent>
-        </Profile>
+        <>
+            <ProfileCard id={profile.id} onClick={popUpFunc}>
+                <ProfileImg img={profile.Img} />
+                <ProfileContent>
+                    <PersonName>{profile.name}</PersonName>
+                    {profile.blogUrl && <BlogLink blogUrl={profile.blogUrl}>Blog</BlogLink>}
+                </ProfileContent>
+            </ProfileCard>
+            <PopUp show={show}>
+                <PopUpFilter onClick={hideFunc} />
+                <PopUpCard>
+                    <Topbox>
+                        <ProfileImg img={profile.Img} style={{ width: '20vh', height: '20vh' }} />
+                        <PopUpContent>
+                            <PopUpName>
+                                {profile.name}
+                                <Smaller>&nbsp;&nbsp;-&nbsp;&nbsp;{profile.currentSchoolID}</Smaller>
+                            </PopUpName>
+                            <PhoneNum>{profile.phoneNum}</PhoneNum>
+                            <Email>{profile.email}</Email>
+                            <IntroductionTitle>Introduction</IntroductionTitle>
+                            <Hr />
+                            <Introduction>{profile.introduction}</Introduction>
+                        </PopUpContent>
+                    </Topbox>
+                </PopUpCard>
+            </PopUp>
+        </>
     );
 };
 
-Poster.propTypes = {
+Profile.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    /*profileImg: PropTypes.string,*/
+    profileImg: PropTypes.string,
     blogUrl: PropTypes.string,
-    spot: PropTypes.string.isRequired,
+    spot: PropTypes.string,
 };
 
-export default Poster;
+export default Profile;

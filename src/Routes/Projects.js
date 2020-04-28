@@ -13,7 +13,10 @@ const Title = styled.h1`
     font-size: 3em;
     font-weight: 600;
     line-height: 150%;
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
+    width: 100%;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e9e9e9;
 `;
 
 const ProjectContainer = styled.div`

@@ -12,6 +12,16 @@ const Title = styled.h1`
     font-size: 3em;
     font-weight: 600;
     line-height: 150%;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.7em;
+    width: 100%;
+    border-bottom: 1px solid #e9e9e9;
+`;
+
+const SubTitle = styled.h2`
+    font-size: 2.5em;
+    font-weight: 600;
+    line-height: 150%;
     margin-bottom: 0.7em;
 `;
 
@@ -19,6 +29,8 @@ const Smaller = styled.span`
     font-size: 0.8em;
     font-weight: 500;
 `;
+
+const Youtube = () => <></>;
 
 const Question = styled.h2`
     font-size: 2em;
@@ -84,24 +96,52 @@ const Hide = styled.span`
     color: transparent;
 `;
 
-const JoinLink = styled.a.attrs((props) => ({
-    href: 'https://forms.gle/uR4rX1nF4HTttaSX7',
-}))`
-    color: #fcfbfb;
-    text-decoration: none;
-    padding: 3px 5px;
+const JoinLink = styled.span`
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+    margin: 0 7px;
+`;
+
+const Button = styled.button`
+    border-radius: 4px;
     background-color: black;
     border: none;
-    border-radius: 3px;
+    color: #fcfbfb;
+    text-align: center;
+    padding: 5px 7px;
+    transition: all 0.5s;
     cursor: pointer;
-    &:hover {
-        text-decoration: underline;
+    margin: 5px;
+    ${JoinLink}:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    &:hover ${JoinLink} {
+        padding-right: 14px;
+        margin: 0px;
+    }
+    &:hover ${JoinLink}:after {
+        opacity: 1;
+        right: 2px;
     }
 `;
 
+const JoinButton = ({ children }) => (
+    <Button>
+        <JoinLink>{children}</JoinLink>
+    </Button>
+);
+
 export default () => (
     <Content>
-        <Title>수상경력</Title>
+        <Title>About</Title>
+        <SubTitle>수상경력</SubTitle>
         <Description>
             <ul>
                 <li>메이커톤 대상 수상</li>
@@ -110,9 +150,9 @@ export default () => (
             </ul>
         </Description>
         <Hr />
-        <Title>
+        <SubTitle>
             Q<Smaller>&</Smaller>A
-        </Title>
+        </SubTitle>
         <Question>Maker는 무엇을 하는 동아리인가요?</Question>
         <Description>
             Maker는 아두이노, 코딩, 3D 모델링부터 프린팅까지 세상에 존재하는 다양한 Maker적 활동을 하는 동아리입니다.
@@ -138,7 +178,7 @@ export default () => (
         <Hr />
         <Question>어떻게 가입할 수 있나요?</Question>
         <Description>
-            2020 maker 가입 신청지는 <JoinLink>이쪽</JoinLink>
+            2020 maker 가입 신청지는 <JoinButton>이쪽</JoinButton>
         </Description>
         <Hr />
         <Question>혹시 요구 수준 같은 게 있나요?</Question>
@@ -158,9 +198,8 @@ export default () => (
                 <span role="img" arial-label="bow">
                     🙇‍♂️
                 </span>
-                귀하게 모시겠습니다.
-            </Strong>{' '}
-            <JoinLink>가시죠{/* 👉(https://forms.gle/uR4rX1nF4HTttaSX7) */}</JoinLink>
+                귀하게 모시겠습니다.<JoinButton>가시죠</JoinButton>
+            </Strong>
         </Description>
         <Hr />
         <Question>Maker에서 어떤 기술을 배울 수 있나요?</Question>

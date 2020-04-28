@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components';
 import { find } from 'styled-components/test-utils';
@@ -152,9 +152,9 @@ function Header({ location: { pathname } }) {
                         About
                     </SLink>
                 </Item>
-                <Item selected={pathname.startsWith('/members')}>
-                    <SLink to="/members" onClick={handleBurger}>
-                        Members
+                <Item selected={pathname.startsWith('/contact')}>
+                    <SLink to="/contact" onClick={handleBurger}>
+                        Contact
                     </SLink>
                 </Item>
                 <Item selected={pathname.startsWith('/projects')}>
