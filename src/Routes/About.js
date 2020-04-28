@@ -283,7 +283,7 @@ export default () => (
         <Hr />
         <Question>💥질문 있어요!💥</Question>
         <Description>
-            <SLink to="/contact">Contact</SLink> 페이지에서 연락처를 확인하실 수 있습니다.
+            <SLink to="/contact">Contact</SLink> 에서 연락처를 확인하실 수 있습니다.
             <br />
             <br />
             문의사항은 이성민 부장이나 김진우 차장을 통해 연락주세요.
