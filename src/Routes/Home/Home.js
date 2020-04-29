@@ -47,6 +47,7 @@ const JoinSLink = styled.span`
 `;
 
 const Button = styled.button`
+    margin-right: 10px;
     border-radius: 8px;
     background-color: black;
     border: none;
@@ -54,6 +55,7 @@ const Button = styled.button`
     text-align: center;
     padding: 15px 20px;
     transition: all 0.5s;
+    float: right;
     cursor: pointer;
     ${JoinSLink}:after {
         content: '»';
@@ -74,6 +76,7 @@ const Button = styled.button`
 `;
 
 const SLink = styled(Link)`
+    margin-right: 10px;
     display: block;
     box-sizing: border-box;
     border: 3px solid black;
@@ -121,8 +124,12 @@ const PageButton = ({ children }) => (
 const ButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
-    ${SLink} {
-        margin-right: 10px;
+    @media screen and (max-width: 400px) {
+        display: block;
+        margin-right: -10px;
+        ${SLink} {
+            margin-bottom: 10px;
+        }
     }
 `;
 

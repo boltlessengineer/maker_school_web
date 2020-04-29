@@ -73,7 +73,7 @@ export default () => {
             phoneNum: '010-4268-1815',
             email: 'kyungwoolee64@gmail.com',
             blogUrl: '',
-            introduction: '동아리 포스토 만든 Jasper',
+            introduction: '"Jasper"',
             spot: 'member',
         },
     ];
