@@ -26,7 +26,7 @@ const PopUpFilter = styled.div`
 const PopUpContent = styled.div`
     font-size: 2em;
     line-height: 1.5em;
-    padding-left: 1vw;
+    padding-left: 3vw;
     padding-top: 1vh;
 `;
 
@@ -130,12 +130,19 @@ const PopUpCard = styled.div`
         font-size: 2em;
     }
     @media screen and (max-width: 800px) {
+        font-size: 0.9em;
         top: 15vh;
         right: 6vw;
         padding: 3vw;
         width: 88vw;
         height: 70vh;
         min-height: 110vw;
+        ${ManagerTag} {
+            font-size: 1.5em;
+        }
+        ${PopUpContent} {
+            font-size: 1.8em;
+        }
     }
     z-index: 11;
     background-color: white;

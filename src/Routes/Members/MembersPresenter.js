@@ -71,9 +71,9 @@ export default () => {
             currentSchoolID: 20515,
             Img: require('Assets/profiles/jasper.png'),
             phoneNum: '010-4268-1815',
-            email: '',
+            email: 'kyungwoolee64@gmail.com',
             blogUrl: '',
-            introduction: '',
+            introduction: '동아리 포스토 만든 Jasper',
             spot: 'member',
         },
     ];
