@@ -110,10 +110,7 @@ const SLink = styled(Link)`
 `;
 
 const JoinButton = ({ children }) => (
-    <Button
-        onClick={() => window.alert('가입 신청지 양식에 대해 학교와 조율 중입니다.\n※학교가 공지한 양식으로 받을지는 아직 미정입니다.※')}
-    >
-        {/*onClick={() => window.open('https://forms.gle/uR4rX1nF4HTttaSX7', '_blank') } */}
+    <Button onClick={() => window.open('https://forms.gle/uR4rX1nF4HTttaSX7', '_blank')}>
         <JoinSLink>{children}</JoinSLink>
     </Button>
 );
