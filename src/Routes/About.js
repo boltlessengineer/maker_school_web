@@ -216,6 +216,7 @@ export default () => (
                 <PrizeLi>메이커톤 대상 수상</PrizeLi>
                 <PrizeLi>부천 로봇 판타지아 대상 수상</PrizeLi>
                 <PrizeLi>국민은행 소프트웨어 경진대회 최우수상 수상</PrizeLi>
+                <PrizeLi>교육부 정보보호영재교육원 정보보안 경진대회 최우수상</PrizeLi>
             </PrizeUl>
         </Description>
         <Hr />
