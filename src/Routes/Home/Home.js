@@ -110,7 +110,8 @@ const SLink = styled(Link)`
 `;
 
 const JoinButton = ({ children }) => (
-    <Button onClick={/*() => window.open('https://forms.gle/uR4rX1nF4HTttaSX7', '_blank') */}>
+    <Button>
+        {/*onClick={() => window.open('https://forms.gle/uR4rX1nF4HTttaSX7', '_blank') } */}
         <JoinSLink>{children}</JoinSLink>
     </Button>
 );
