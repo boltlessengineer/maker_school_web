@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Profile from '../../Components/Profile';
+import { useLockScroll } from '../../Components/functions/useLockScroll';
 
 const Content = styled.div`
     padding-top: calc(20px + 10vh);
@@ -29,6 +30,7 @@ const ProfilesContainer = styled.div`
 `;
 
 export default () => {
+    const [isLocked, { lockScroll, unlockScroll }] = useLockScroll();
     const profiles = [
         {
             id: 201910518,
@@ -81,9 +83,11 @@ export default () => {
     function HandlePopUp(event) {
         const cardID = parseInt(event.currentTarget.id);
         setShowCard(cardID);
+        lockScroll();
     }
     function HandleHide() {
         setShowCard(0);
+        unlockScroll();
     }
     return (
         <Content>
