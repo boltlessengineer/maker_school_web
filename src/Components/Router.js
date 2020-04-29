@@ -15,5 +15,6 @@ export default () => (
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Members} />
         <Route path="/projects" exact component={Projects} />
+        <Redirect from="*" to="/" />
     </Router>
 );
