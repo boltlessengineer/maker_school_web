@@ -205,10 +205,13 @@ const SLink = styled(Link)`
 export default () => (
   <Content>
     <Title>About</Title>
-    <SubTitle>홍보영상</SubTitle>
+    <SubTitle>
+      홍보영상<Smaller>&nbsp;&nbsp;&nbsp;Don't Blink 패러디</Smaller>
+    </SubTitle>
     <YoutubeContainer>
       <YoutubeInner>
-        <YoutubeIframe src={"https://www.youtube.com/embed/B8aiSA7EX70"} />
+        <YoutubeIframe src={"https://www.youtube.com/embed/T93levlcw1U"} />
+        {/*https://www.youtube.com/embed/B8aiSA7EX70*/}
       </YoutubeInner>
     </YoutubeContainer>
     <Hr />
