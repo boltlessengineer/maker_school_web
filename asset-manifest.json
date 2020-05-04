@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/maker_school_web/static/js/main.51e936cb.chunk.js",
-    "main.js.map": "/maker_school_web/static/js/main.51e936cb.chunk.js.map",
+    "main.js": "/maker_school_web/static/js/main.8eae2920.chunk.js",
+    "main.js.map": "/maker_school_web/static/js/main.8eae2920.chunk.js.map",
     "runtime-main.js": "/maker_school_web/static/js/runtime-main.80941235.js",
     "runtime-main.js.map": "/maker_school_web/static/js/runtime-main.80941235.js.map",
-    "static/js/2.b3a7ac6b.chunk.js": "/maker_school_web/static/js/2.b3a7ac6b.chunk.js",
-    "static/js/2.b3a7ac6b.chunk.js.map": "/maker_school_web/static/js/2.b3a7ac6b.chunk.js.map",
+    "static/js/2.b258be18.chunk.js": "/maker_school_web/static/js/2.b258be18.chunk.js",
+    "static/js/2.b258be18.chunk.js.map": "/maker_school_web/static/js/2.b258be18.chunk.js.map",
     "index.html": "/maker_school_web/index.html",
-    "precache-manifest.87dedc1d3b78104d3ba7e40e7523d515.js": "/maker_school_web/precache-manifest.87dedc1d3b78104d3ba7e40e7523d515.js",
+    "precache-manifest.c471e20e969e6828fa19c48365be7d17.js": "/maker_school_web/precache-manifest.c471e20e969e6828fa19c48365be7d17.js",
     "service-worker.js": "/maker_school_web/service-worker.js",
-    "static/js/2.b3a7ac6b.chunk.js.LICENSE.txt": "/maker_school_web/static/js/2.b3a7ac6b.chunk.js.LICENSE.txt",
+    "static/js/2.b258be18.chunk.js.LICENSE.txt": "/maker_school_web/static/js/2.b258be18.chunk.js.LICENSE.txt",
     "static/media/Code.png": "/maker_school_web/static/media/Code.bc257cbc.png",
     "static/media/Cyber_Truck.png": "/maker_school_web/static/media/Cyber_Truck.485bf5a5.png",
     "static/media/Lee.png": "/maker_school_web/static/media/Lee.a13ecbc2.png",
@@ -19,7 +19,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.80941235.js",
-    "static/js/2.b3a7ac6b.chunk.js",
-    "static/js/main.51e936cb.chunk.js"
+    "static/js/2.b258be18.chunk.js",
+    "static/js/main.8eae2920.chunk.js"
   ]
 }
