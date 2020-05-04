@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/maker_school_web/static/js/main.82577c90.chunk.js",
-    "main.js.map": "/maker_school_web/static/js/main.82577c90.chunk.js.map",
+    "main.js": "/maker_school_web/static/js/main.052f49e0.chunk.js",
+    "main.js.map": "/maker_school_web/static/js/main.052f49e0.chunk.js.map",
     "runtime-main.js": "/maker_school_web/static/js/runtime-main.80941235.js",
     "runtime-main.js.map": "/maker_school_web/static/js/runtime-main.80941235.js.map",
     "static/js/2.b258be18.chunk.js": "/maker_school_web/static/js/2.b258be18.chunk.js",
     "static/js/2.b258be18.chunk.js.map": "/maker_school_web/static/js/2.b258be18.chunk.js.map",
     "index.html": "/maker_school_web/index.html",
-    "precache-manifest.c6e135bdb416329365851aeea1703423.js": "/maker_school_web/precache-manifest.c6e135bdb416329365851aeea1703423.js",
+    "precache-manifest.3dba26d04ac55da520277c8c3ac64eca.js": "/maker_school_web/precache-manifest.3dba26d04ac55da520277c8c3ac64eca.js",
     "service-worker.js": "/maker_school_web/service-worker.js",
     "static/js/2.b258be18.chunk.js.LICENSE.txt": "/maker_school_web/static/js/2.b258be18.chunk.js.LICENSE.txt",
     "static/media/Code.png": "/maker_school_web/static/media/Code.bc257cbc.png",
@@ -20,6 +20,6 @@
   "entrypoints": [
     "static/js/runtime-main.80941235.js",
     "static/js/2.b258be18.chunk.js",
-    "static/js/main.82577c90.chunk.js"
+    "static/js/main.052f49e0.chunk.js"
   ]
 }
