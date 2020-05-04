@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e57b3e9361de4d9c367f727b9e503d82",
+    "revision": "9411e196bf0cfaa6df832a4b24c0a37c",
     "url": "/maker_school_web/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/maker_school_web/static/js/2.b258be18.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5a5eddf890fe2f8ee09b",
-    "url": "/maker_school_web/static/js/main.8eae2920.chunk.js"
+    "revision": "da88554e6218659f5ea5",
+    "url": "/maker_school_web/static/js/main.82577c90.chunk.js"
   },
   {
     "revision": "f685da6a2ecedd3175ac",
