@@ -206,10 +206,11 @@ export default () => (
   <Content>
     <Title>About</Title>
     <SubTitle>
-      홍보영상<Smaller>&nbsp;&nbsp;&nbsp;Don't Blink 패러디</Smaller>
+      홍보영상<Smaller>&nbsp;&nbsp;&nbsp;애플 광고 패러디</Smaller>
     </SubTitle>
     <YoutubeContainer>
       <YoutubeInner>
+        <YoutubeIframe src={"https://youtube.com/embed/4WTgeMUzask"} />
         {/*<YoutubeIframe src={"https://www.youtube.com/embed/B8aiSA7EX70"} />
         {/*https://www.youtube.com/embed/T93levlcw1U*/}
       </YoutubeInner>
